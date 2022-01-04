@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="jumbotron" style="margin-left: 30%; margin-top:7.5%; box-shadow: 25px;" class="card">
+
+
+    <form action="#" method="POST" style="display:grid;  width:50%;">
+        <h1>Please login</h1>
+        <hr>
+        {% csrf_token %}
+        <label for="username">Name</label>
+        <input type="text" name="username" placeholder="enter your name">
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <button class="btn btn-primary" style="margin-top: 2%;">login</button>
+
+
+
+    </form>
+
+
+</div>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block body %}
+
+
+
+<form action="" method="POST"
+    style=" margin: 0%; margin-top: 10%; margin-left:25%;  width: 50%; box-shadow:50px black; margin-right: 2%; padding: 2%; background-color: whitesmoke;"
+    class="
+    container-fluid">
+
+    {% csrf_token %}
+    {{forms.as_p}}
+
+    <input type="submit" value="Send">
+
+
+</form>
+
+
+
+
+
+{% endblock body %}

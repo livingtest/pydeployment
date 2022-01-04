@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="jumbotron">
+    {% if checkreg %}
+    <h2>Thanks for registering with us</h2>
+
+    {% else %}
+
+    <form method="POST" class="form-group" style="margin: 0%; margin-top: 10%; margin-left: 30%; padding: 0%; ">
+        {% csrf_token %}
+
+        {{ userdetail.as_p }}
+        {{ profilepics.as_p }}
+        <input type="submit" value="Signup" class="btn btn-primary">
+    </form>
+
+    {% endif %}
+
+</div>
+
+
+
+
+
+
+{% endblock body %}

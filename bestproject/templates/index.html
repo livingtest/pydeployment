@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<section>
+    <div>
+        <form action="" style="margin-top: 10%; margin-left: 25%; padding: 5%; " class="form-group" method="POST">
+
+            {% csrf_token %}
+            {{userform.as_p}}
+            <input class="btn btn-primary" type="submit" value="Send">
+
+        </form>
+    </div>
+</section>
+
+{% endblock body %}
